@@ -1,0 +1,72 @@
+name: CrimsonBann
+description: Umfassendes Bann-System mit Slash-Commands, GUI und Discord-Webhook
+version: "2.0"
+
+main: com.ngtmehros.nigtmehrosvanish.NigtmehrosBanPlugin
+api-version: "1.21.4"
+load: POSTWORLD
+
+authors: [ Nigtmehrooo ]
+
+commands:
+  ban:
+    description: Bannt einen Spieler permanent
+    usage: /ban <spieler> <grund>
+    permission: crimisonbann.ban
+  tempban:
+    description: Bannt einen Spieler zeitweise
+    usage: /tempban <spieler> <dauer> <grund>
+    permission: crimisonbann.ban
+  unban:
+    description: Entbannt einen Spieler
+    usage: /unban <spieler>
+    permission: crimisonbann.unban
+  ipban:
+    description: Bannt eine IP-Adresse
+    usage: /ipban <spieler> <dauer|perm> <grund>
+    permission: crimisonbann.ipban
+  bannlist:
+    description: Zeigt alle Banns in einer GUI an
+    usage: /bannlist
+    permission: crimisonbann.bannlist
+  editbanreason:
+    description: Ändert den Grund eines Banns
+    usage: /editbanreason <spieler> <neuer grund>
+    permission: crimisonbann.ban
+  editbantime:
+    description: Ändert die Dauer eines Banns
+    usage: /editbantime <spieler> <neue dauer|perm>
+    permission: crimisonbann.ban
+  evidence:
+    description: Verwaltet Evidence für einen Spieler
+    usage: /evidence <spieler> <action>
+    permission: crimisonbann.evidence
+
+permissions:
+  crimisonbann.ban:
+    description: Erlaubt /ban und /tempban
+    default: op
+  crimisonbann.unban:
+    description: Erlaubt /unban
+    default: op
+  crimisonbann.ipban:
+    description: Erlaubt /ipban
+    default: op
+  crimisonbann.bannlist:
+    description: Erlaubt /bannlist
+    default: op
+  crimisonbann.bypass:
+    description: Schützt einen Spieler vor Banns
+    default: op
+  crimisonbann.admin:
+    description: Zeigt Admin-Informationen an
+    default: op
+  crimisonbann.evidence:
+    description: Erlaubt /evidence Befehle
+    default: op
+  crimisonbann.multiaccount:
+    description: Erlaubt Multi-Account Detection
+    default: op
+  crimisonbann.replay:
+    description: Erlaubt Replay-Aufnahmen
+    default: op
